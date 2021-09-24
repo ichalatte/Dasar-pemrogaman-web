@@ -1,0 +1,95 @@
+body
+{
+    margin : 0;
+    padding: 0;
+}
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    width:  110px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    color: hsl(323, 100%, 72%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 130px; 
+    margin-bottom: 10px;
+    margin-left: -60px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background: none;
+    border: 3px solid #ff6ec7;
+    border-radius: 100px;
+    transition: 1.8s;
+  }
+  .button:hover
+  { box-shadow: 0 5px 50px 0 #FF03D9 inset,0 5px 50px 0 #FF03D9;
+  }
+section
+{
+    width: 100%;
+    height: 100vh;
+}
+section .layer2
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(bg11.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 2s;
+}
+section .layer1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    height: 60%;
+    background: url(bg11.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 1;
+    transition: 2s;
+}
+.layer1:hover ~ .layer2
+{
+    filter:contrast(200%);
+}
+.layer1:hover
+{
+    box-shadow: 0px -1px 16px 5px #FF03D9;
+}
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    section .layer1 {
+      width: 100%;
+      height:80%;
+      padding: 0;
+    }
+    section .layer2 {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    section .layer1 {
+        width: 100%;
+        height: 80%
+      }
+    section .layer2 {      
+        width: 100%;
+        height:100%
+    }
+}
